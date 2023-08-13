@@ -1,0 +1,39 @@
+2023-08-13 23:54:57.493 INFO  com.infuq.export.Bootstrap - Starting Bootstrap using Java 1.8.0_202 on DESKTOP-LE3U64R with PID 18472 (D:\Repository\infuq-export\target\classes started by infuq in D:\Repository\infuq-export)
+2023-08-13 23:54:57.497 INFO  com.infuq.export.Bootstrap - The following profiles are active: local
+2023-08-13 23:54:59.037 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-13 23:54:59.040 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-13 23:54:59.065 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2023-08-13 23:54:59.351 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=37df3958-b6ad-324f-9dad-ce04c24acc31
+2023-08-13 23:54:59.852 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-13 23:54:59.858 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-13 23:54:59.861 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$402/1372150180] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-13 23:54:59.867 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-13 23:54:59.914 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-13 23:54:59.919 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$b5be9a5d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-13 23:54:59.950 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-13 23:55:01.159 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 58082 (http)
+2023-08-13 23:55:01.173 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-58082"]
+2023-08-13 23:55:01.174 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-13 23:55:01.174 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-13 23:55:01.371 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-13 23:55:01.372 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3781 ms
+2023-08-13 23:55:01.812 INFO  com.baomidou.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2023-08-13 23:55:02.957 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1,master} inited
+2023-08-13 23:55:03.052 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2,slave} inited
+2023-08-13 23:55:03.052 INFO  com.baomidou.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
+2023-08-13 23:55:03.053 INFO  com.baomidou.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2023-08-13 23:55:03.054 INFO  com.baomidou.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2023-08-13 23:55:04.362 INFO  org.redisson.Version - Redisson 3.16.0
+2023-08-13 23:55:05.888 INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 172.31.3.199/172.31.3.199:6379
+2023-08-13 23:55:05.931 INFO  org.redisson.connection.pool.MasterConnectionPool - 24 connections initialized for 172.31.3.199/172.31.3.199:6379
+2023-08-13 23:55:06.417 INFO  com.alibaba.cloud.sentinel.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2023-08-13 23:55:07.927 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-13 23:55:07.991 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-58082"]
+2023-08-13 23:55:08.004 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 58082 (http) with context path ''
+2023-08-13 23:55:08.546 INFO  com.infuq.export.Bootstrap - Started Bootstrap in 12.738 seconds (JVM running for 13.565)
+2023-08-13 23:55:45.171 INFO  com.baomidou.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2023-08-13 23:55:45.175 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closing ...
+2023-08-13 23:55:45.186 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2023-08-13 23:55:45.187 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-08-13 23:55:45.197 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-08-13 23:55:45.197 INFO  com.baomidou.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
