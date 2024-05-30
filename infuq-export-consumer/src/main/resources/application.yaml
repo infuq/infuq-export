@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: infuq-export-consumer
+  redis:
+    host: r-bp1c49d65e2acfe4pd.redis.rds.aliyuncs.com
+    port: 6379
+    database: 2
+    password: Zhishang18

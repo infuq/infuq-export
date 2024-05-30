@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: infuq-export-provider
+
+server:
+  port: 58081
+  tomcat:
+    basedir: /Users/infuq/logs/tmp
+    max-threads: 100
+    min-spare-threads: 20
+    accept-count: 100
+

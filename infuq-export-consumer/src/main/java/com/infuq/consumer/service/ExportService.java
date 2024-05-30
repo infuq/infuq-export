@@ -2,6 +2,7 @@ package com.infuq.consumer.service;
 
 import com.infuq.common.enums.FileStatus;
 import com.infuq.common.model.ExportRecord;
+import com.infuq.common.model.ExportTaskDTO;
 import com.infuq.consumer.model.RunningExportTaskInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
@@ -25,9 +26,9 @@ public class ExportService {
     private final Map<Long, RunningExportTaskInfo> runningTaskMap = new ConcurrentHashMap<>();
 
 
-    public void handleExport() {
+    public void handleExport(ExportTaskDTO exportTaskDTO) {
 
-        Long exportRecordId = 123L;
+        Long exportRecordId = exportTaskDTO.getExportRecordId();
 
         // 1.查询导出记录
         ExportRecord exportRecord = null;
