@@ -24,6 +24,7 @@ public class MQTCPConfig {
     public Properties properties() {
         Properties properties = new Properties();
 
+        properties.setProperty(PropertyKeyConst.ConsumeTimeout, "15");
         properties.setProperty(PropertyKeyConst.SendMsgTimeoutMillis, "30000");
         properties.setProperty(PropertyKeyConst.AccessKey, "LTAIVydAIJ410rdg");
         properties.setProperty(PropertyKeyConst.SecretKey, "dozXcWUfUtQJFg5Rxv8gDSejSQC0dC");

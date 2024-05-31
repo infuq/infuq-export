@@ -4,5 +4,14 @@ spring:
   redis:
     host: r-bp1c49d65e2acfe4pd.redis.rds.aliyuncs.com
     port: 6379
-    database: 2
+    database: 20
     password: Zhishang18
+  datasource:
+    url: jdbc:mysql://rm-bp1349lz8ic76gru5.mysql.rds.aliyuncs.com:3306/wisp_test?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: bd_test_user
+    password: nhpG4N5VA3Sz
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maxPoolSize: 10
+      minIdle: 5

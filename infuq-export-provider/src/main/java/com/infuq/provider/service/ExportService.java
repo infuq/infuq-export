@@ -13,6 +13,7 @@ import com.infuq.common.enums.SuffixType;
 import com.infuq.common.model.ExportRecord;
 import com.infuq.common.model.ExportTaskDTO;
 import com.infuq.common.req.StoreCustomerOrderReq;
+import com.infuq.provider.mapper.ExportRecordMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +30,8 @@ public class ExportService {
 
     @Autowired
     private Producer producer;
+    @Autowired
+    private ExportRecordMapper exportRecordMapper;
 
 
     public void exportStoreCustomerOrder(StoreCustomerOrderReq req) {
@@ -49,7 +52,7 @@ public class ExportService {
                 .build();
 
         // 1.向数据库插入导出记录
-        // mapper.save(record)
+        exportRecordMapper.insert(record);
 
         // 2.发送MQ消息
         /* HTTP 协议
@@ -67,14 +70,14 @@ public class ExportService {
 
 
         ExportTaskDTO exportTaskDTO = ExportTaskDTO.builder()
-                .exportRecordId(123L)
+                .exportRecordId(record.getExportRecordId())
                 .build();
 
         // TCP 协议
         Message message = new Message();
         message.setTopic("TEST");
         message.setTag("EXPORT");
-        message.setKey("123456qwerty");
+        message.setKey(record.getExportRecordId().toString());
         message.setBody(JSON.toJSONString(exportTaskDTO).getBytes());
         SendResult response = producer.send(message);
         log.info("msgId is: " + response.getMessageId());

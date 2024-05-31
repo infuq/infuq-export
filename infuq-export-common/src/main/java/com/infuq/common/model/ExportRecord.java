@@ -1,5 +1,7 @@
 package com.infuq.common.model;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Builder;
 import lombok.Data;
 
@@ -10,11 +12,13 @@ import java.time.LocalDateTime;
  */
 @Builder
 @Data
+@TableName("export_record")
 public class ExportRecord {
 
     /**
      * 记录ID
      */
+    @TableId
     private Long exportRecordId;
 
     /**

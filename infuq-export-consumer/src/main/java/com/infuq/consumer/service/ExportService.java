@@ -3,6 +3,7 @@ package com.infuq.consumer.service;
 import com.infuq.common.enums.FileStatus;
 import com.infuq.common.model.ExportRecord;
 import com.infuq.common.model.ExportTaskDTO;
+import com.infuq.consumer.mapper.ExportRecordMapper;
 import com.infuq.consumer.model.RunningExportTaskInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
@@ -22,6 +23,8 @@ public class ExportService {
 
     @Autowired
     private RedissonClient redissonClient;
+    @Autowired
+    private ExportRecordMapper exportRecordMapper;
 
     private final Map<Long, RunningExportTaskInfo> runningTaskMap = new ConcurrentHashMap<>();
 
@@ -31,7 +34,7 @@ public class ExportService {
         Long exportRecordId = exportTaskDTO.getExportRecordId();
 
         // 1.查询导出记录
-        ExportRecord exportRecord = null;
+        ExportRecord exportRecord = exportRecordMapper.selectById(exportRecordId);
         if (exportRecord == null) {
             log.error("导出记录不存在");
             return;
@@ -61,6 +64,7 @@ public class ExportService {
                 log.warn("短时间内同一个导出任务被重复处理,记录ID:{},获取锁失败", exportRecordId);
                 return;
             }
+            log.info("加锁成功,记录ID:" + exportRecordId);
 
             RunningExportTaskInfo runningTask = new RunningExportTaskInfo();
             runningTask.setExportRecordId(exportRecordId);
@@ -72,18 +76,22 @@ public class ExportService {
             String exportType = exportRecord.getExportType();
             // 根据 exportType 获取对应业务的导出策略类, 执行具体的导出业务
 
+            Thread.sleep(26 * 60 * 1000);
+
         } catch (Exception e) {
 
             exportRecord.setFileStatus(FileStatus.EXPORT_ERROR.getCode());
             exportRecord.setRemark(e.getMessage());
 
             // 更新导出记录
-            // mapper.update(exportRecord)
+            exportRecordMapper.updateById(exportRecord);
 
         } finally {
             runningTaskMap.remove(exportRecordId);
 
             if (rLock.isLocked() && rLock.isHeldByCurrentThread()) {
+                // 释放锁
+                log.info("释放锁,记录ID:" + exportRecordId);
                 rLock.unlock();
             }
         }
