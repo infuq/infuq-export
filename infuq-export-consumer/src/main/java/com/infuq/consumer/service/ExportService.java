@@ -76,7 +76,7 @@ public class ExportService {
             String exportType = exportRecord.getExportType();
             // 根据 exportType 获取对应业务的导出策略类, 执行具体的导出业务
 
-            Thread.sleep(26 * 60 * 1000);
+            //Thread.sleep(26 * 60 * 1000);
 
         } catch (Exception e) {
 

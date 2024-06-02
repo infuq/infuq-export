@@ -23,14 +23,14 @@ public class MQTCPConfig {
         Properties properties = new Properties();
 
         properties.setProperty(PropertyKeyConst.SendMsgTimeoutMillis, "30000");
-        properties.setProperty(PropertyKeyConst.AccessKey, "LTAIVydAIJ410rdg");
-        properties.setProperty(PropertyKeyConst.SecretKey, "dozXcWUfUtQJFg5Rxv8gDSejSQC0dC");
-        properties.setProperty(PropertyKeyConst.NAMESRV_ADDR, "http://MQ_INST_1106705442396860_BXWMBxy9.mq-internet-access.mq-internet.aliyuncs.com:80");
+        properties.setProperty(PropertyKeyConst.AccessKey, "LTAI5tKjNBBn5xo4surp7Z5P");
+        properties.setProperty(PropertyKeyConst.SecretKey, "dHSBviUuisvwpl4ojqAiNBsCs8AJxW");
+        properties.setProperty(PropertyKeyConst.NAMESRV_ADDR, "http://MQ_INST_1077684811287398_BY9u0O9r.cn-hangzhou.mq.aliyuncs.com:80");
 
 //        String name = environment.getProperty("spring.application.name");
 //        String profile = environment.getProperty("spring.profiles.active");
 //        String groupId = "GID_" + name.replaceAll("-", "_").toUpperCase() + "_" + profile.toUpperCase();
-        properties.setProperty(PropertyKeyConst.GROUP_ID, "GID_USER_CENTER_TEST");
+        properties.setProperty(PropertyKeyConst.GROUP_ID, "GID_EXPORT_PROVIDER");
         return properties;
     }
 

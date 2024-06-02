@@ -2,14 +2,13 @@ spring:
   application:
     name: infuq-export-consumer
   redis:
-    host: r-bp1c49d65e2acfe4pd.redis.rds.aliyuncs.com
+    host: 192.168.31.131
     port: 6379
-    database: 20
-    password: Zhishang18
+    database: 1
   datasource:
-    url: jdbc:mysql://rm-bp1349lz8ic76gru5.mysql.rds.aliyuncs.com:3306/wisp_test?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
-    username: bd_test_user
-    password: nhpG4N5VA3Sz
+    url: jdbc:mysql://192.168.31.131:3306/db0?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 9527
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.zaxxer.hikari.HikariDataSource
     hikari:

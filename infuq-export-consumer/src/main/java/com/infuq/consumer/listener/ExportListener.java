@@ -26,7 +26,7 @@ public class ExportListener implements MessageListener {
     @Override
     public Action consume(Message message, ConsumeContext context) {
 
-        log.info("消费MQ:" + message.getMsgID());
+        log.info("监听器:" + this.hashCode() + ",消费MQ:" + message.getMsgID() + ",TOPIC:" + message.getTopic() + ",TAG:" + message.getTag());
         byte[] body = message.getBody();
 
         ExportTaskDTO exportTaskDTO = JSON.parseObject(body, ExportTaskDTO.class);

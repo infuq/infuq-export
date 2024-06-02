@@ -10,4 +10,8 @@ public class StoreCustomerOrderReq {
 
     private Long userId;
 
+    private String topic;
+
+    private String tag;
+
 }

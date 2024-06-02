@@ -75,8 +75,8 @@ public class ExportService {
 
         // TCP 协议
         Message message = new Message();
-        message.setTopic("TEST");
-        message.setTag("EXPORT");
+        message.setTopic(req.getTopic());
+        message.setTag(req.getTag());
         message.setKey(record.getExportRecordId().toString());
         message.setBody(JSON.toJSONString(exportTaskDTO).getBytes());
         SendResult response = producer.send(message);
