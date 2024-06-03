@@ -3,7 +3,7 @@ package com.infuq.consumer.config;
 import com.aliyun.openservices.ons.api.Consumer;
 import com.aliyun.openservices.ons.api.ONSFactory;
 import com.aliyun.openservices.ons.api.PropertyKeyConst;
-import com.infuq.consumer.listener.ExportListener;
+import com.infuq.consumer.listener.MQExportListener;
 import com.infuq.consumer.service.ExportService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -41,8 +41,8 @@ public class MQTCPConfig {
     public Consumer consumer(ExportService exportService) {
 
         Consumer consumer = ONSFactory.createConsumer(properties());
-        consumer.subscribe("EXPORT_ORDER", "*", new ExportListener(exportService));
-        consumer.subscribe("EXPORT_RETURN_ORDER", "*", new ExportListener(exportService));
+        consumer.subscribe("EXPORT_ORDER", "*", new MQExportListener(exportService));
+        consumer.subscribe("EXPORT_RETURN_ORDER", "*", new MQExportListener(exportService));
         return consumer;
     }
 

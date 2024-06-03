@@ -7,19 +7,20 @@ import com.aliyun.openservices.ons.api.Message;
 import com.aliyun.openservices.ons.api.MessageListener;
 import com.infuq.common.model.ExportTaskDTO;
 import com.infuq.consumer.service.ExportService;
-import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-
+/**
+ * 通过MQ方式监听导出消息
+ */
 @Slf4j
-public class ExportListener implements MessageListener {
+public class MQExportListener implements MessageListener {
 
     private ExportService exportService;
 
-    public ExportListener() {
+    public MQExportListener() {
     }
 
-    public ExportListener(ExportService exportService) {
+    public MQExportListener(ExportService exportService) {
         this.exportService = exportService;
     }
 

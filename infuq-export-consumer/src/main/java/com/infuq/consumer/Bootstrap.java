@@ -8,7 +8,6 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication(exclude = {
-//        RedisAutoConfiguration.class,
         MongoAutoConfiguration.class
 })
 @ComponentScan(basePackages = {"com.infuq.consumer"})
