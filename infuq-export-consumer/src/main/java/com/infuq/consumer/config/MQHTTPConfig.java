@@ -18,12 +18,12 @@ public class MQHTTPConfig {
     @Bean
     public MQConsumer consumer() {
         MQClient mqClient = new MQClient(
-                "http://1106705442396860.mqrest.cn-hangzhou.aliyuncs.com",
-                "LTAIVydAIJ410rdg",
-                "dozXcWUfUtQJFg5Rxv8gDSejSQC0dC"
+                "",
+                "",
+                ""
         );
 
-        return mqClient.getConsumer("MQ_INST_1106705442396860_BXXINmp6", "TEST", "GID_WISP_EXPORT_TEST", "EXPORT");
+        return mqClient.getConsumer("", "TEST", "", "EXPORT");
     }
 
 

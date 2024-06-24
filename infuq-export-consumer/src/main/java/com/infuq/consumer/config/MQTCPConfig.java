@@ -26,9 +26,9 @@ public class MQTCPConfig {
 
         properties.setProperty(PropertyKeyConst.ConsumeTimeout, "3");
         properties.setProperty(PropertyKeyConst.SendMsgTimeoutMillis, "30000");
-        properties.setProperty(PropertyKeyConst.AccessKey, "LTAI5tKjNBBn5xo4surp7Z5P");
-        properties.setProperty(PropertyKeyConst.SecretKey, "dHSBviUuisvwpl4ojqAiNBsCs8AJxW");
-        properties.setProperty(PropertyKeyConst.NAMESRV_ADDR, "http://MQ_INST_1077684811287398_BY9u0O9r.cn-hangzhou.mq.aliyuncs.com:80");
+        properties.setProperty(PropertyKeyConst.AccessKey, "");
+        properties.setProperty(PropertyKeyConst.SecretKey, "");
+        properties.setProperty(PropertyKeyConst.NAMESRV_ADDR, "");
 
 //        String name = environment.getProperty("spring.application.name");
 //        String profile = environment.getProperty("spring.profiles.active");
